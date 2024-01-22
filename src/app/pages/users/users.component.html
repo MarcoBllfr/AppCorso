@@ -1,0 +1,20 @@
+<div>
+<button mat-mini-fab color="primary" (click)="create()">
+    <mat-icon>add</mat-icon>
+</button>
+</div>
+    <a mat-list-item [routerLink]="['user', user.id]" *ngFor="let user of users">
+        <p matLine>
+            <mat-card >
+                <mat-card-header>
+                  <div mat-card-avatar>
+                    <img mat-card-image  class="example-header-image" src="https://robohash.org/{{user.id}}" alt="Profile img" >
+                    </div>
+                  <mat-card-title >{{user.nome}}</mat-card-title>
+                  <mat-card-subtitle>Sede</mat-card-subtitle>
+                </mat-card-header>
+                
+              </mat-card>
+        </p>
+    </a>
+    

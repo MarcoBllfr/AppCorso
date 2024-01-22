@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Aggiungi un nuovo utente</h2>
+
+<mat-dialog-content>
+    <mat-form-field>
+        <mat-label>Nome</mat-label>
+        <input matInput [(ngModel)]="user.nome" placeholder="Nome utente">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Descrizione/mansione</mat-label>
+        <textarea matInput [(ngModel)]="user.descrizione" placeholder="Mansione utente"></textarea>
+    </mat-form-field>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close cdkFocusInitial>Annulla</button>
+    <button mat-button (click)="close()" [disabled]="!(user.nome && user.descrizione)">Salva</button>
+</mat-dialog-actions>

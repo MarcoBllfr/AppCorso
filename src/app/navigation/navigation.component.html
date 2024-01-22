@@ -1,0 +1,29 @@
+<mat-toolbar>
+    <span>{{ title }}</span>
+    <span class="spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Main menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <div mat-menu-item class="user-info">
+            <span>Ciao <b>{{ user }}</b>!</span>
+            <mat-icon style="color: green;">offline_pin</mat-icon>
+        </div>
+        <a mat-menu-item routerLink="/">
+            <mat-icon>list</mat-icon>
+            <span>Lista Utenti</span>
+        </a>
+        <a mat-menu-item routerLink="/login">
+            <mat-icon>logout</mat-icon>
+            <span>Logout</span>
+            
+        </a>
+    </mat-menu>
+</mat-toolbar>
+
+<div class="page-wrapper">
+    <router-outlet></router-outlet>
+    
+</div>
+
+<app-footer></app-footer>
